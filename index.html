@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Designer & Front End Developer</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="logo.png" type="image/x-icon" />
+  <style>
+    #header {
+      background-image: url('86.webp');
+    }
+    #header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(33, 33, 33, 0) 30%, #121212 100%);
+      pointer-events: none; /* permite clicar nos elementos abaixo */
+      z-index: 1;
+    }
+    #contact {
+      background-color: #121212; /* Fallback caso a imagem não carregue */
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+    }
+  </script>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <img src="logo.png">
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <ul class="menu" id="menu">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+      </nav>
+      <div class="hero-content">
+        <h2>Transform Your Vision <br class="quebra-desktop">Into Digital Reality</h2>
+        <p>I’m a Web Designer and Front End Developer <br class="quebra-desktop">specializing in creating modern, functional, and goal-driven websites.</p>
+        <a href="#services" class="cta-button hero-cta">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!--carrossel-->
+  <section class="logo-carousel">
+    <div class="carousel-track">
+      <!-- Repetir logos para looping suave -->
+      <div class="logo-slide"><img src="images/logo1.png" alt="Logo 1" /></div>
+      <div class="logo-slide"><img src="images/logo2.png" alt="Logo 2" /></div>
+      <div class="logo-slide"><img src="images/logo3.png" alt="Logo 3" /></div>
+      <div class="logo-slide"><img src="images/logo4.png" alt="Logo 4" /></div>
+      <div class="logo-slide"><img src="images/logo5.png" alt="Logo 5" /></div>
+      <div class="logo-slide"><img src="images/logo6.png" alt="Logo 5" /></div>
+      <div class="logo-slide"><img src="images/logo1.png" alt="Logo 1" /></div>
+      <div class="logo-slide"><img src="images/logo2.png" alt="Logo 2" /></div>
+      <div class="logo-slide"><img src="images/logo3.png" alt="Logo 3" /></div>
+      <div class="logo-slide"><img src="images/logo4.png" alt="Logo 4" /></div>
+      <div class="logo-slide"><img src="images/logo5.png" alt="Logo 5" /></div>
+      <div class="logo-slide"><img src="images/logo6.png" alt="Logo 5" /></div>
+      <div class="logo-slide"><img src="images/logo1.png" alt="Logo 1" /></div>
+      <div class="logo-slide"><img src="images/logo2.png" alt="Logo 2" /></div>
+      <div class="logo-slide"><img src="images/logo3.png" alt="Logo 3" /></div>
+      <div class="logo-slide"><img src="images/logo4.png" alt="Logo 4" /></div>
+      <div class="logo-slide"><img src="images/logo5.png" alt="Logo 5" /></div>
+      <div class="logo-slide"><img src="images/logo6.png" alt="Logo 5" /></div>
+      <div class="logo-slide"><img src="images/logo1.png" alt="Logo 1" /></div>
+      <div class="logo-slide"><img src="images/logo2.png" alt="Logo 2" /></div>
+      <div class="logo-slide"><img src="images/logo3.png" alt="Logo 3" /></div>
+      <div class="logo-slide"><img src="images/logo4.png" alt="Logo 4" /></div>
+      <div class="logo-slide"><img src="images/logo5.png" alt="Logo 5" /></div>
+      <div class="logo-slide"><img src="images/logo6.png" alt="Logo 5" /></div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2>What I Offer</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <img class="services-img" src="images/design-creative.png" alt="Creative Design">
+          <h3>Creative Design</h3>
+          <p>Custom layouts tailored to reflect your brand’s identity.</p>
+        </div>
+        <div class="service-card">
+          <img class="services-img" src="images/webdev.png" alt="Creative Design">
+          <h3>Front-End Development</h3>
+          <p>Responsive and optimized websites for a seamless user experience.</p>
+        </div>
+        <div class="service-card">
+          <img class="services-img" src="images/growup.png" alt="Creative Design">
+          <h3>Tangible Results</h3>
+          <p>Designs that convert visitors into customers, boosting your business.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="section">
+    <div class="container">
+      <h2>My Portfolio</h2>
+  </section>
+  <section class="galeria-links">
+    <a href="https://stigyme.github.io/StiGy-Studio/"><img src="images/Frame5.png" alt="Imagem 5" /></a>
+    <a href="https://moviesforyou.com.br/"><img src="images/Frame1.png" alt="Imagem 1" /></a>
+    <a href="https://performanceacademy.education/vender-mais-com-ia-v2/"><img src="images/Frame2.png" alt="Imagem 2" /></a>
+    <a href="https://performanceacademy.education/"><img src="images/Frame3.png" alt="Imagem 3" /></a>
+    <a href="https://performanceacademy.education/curso-de-ia-para-empresarios-em-sao-paulo/"><img src="images/Frame4.png" alt="Imagem 4" /></a>
+    <a href="https://zappiello.com.br/"><img src="images/Frame6.png" alt="Imagem 6" /></a>
+  </section>
+  
+  <section class="video-section">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="images/webprojects.mp4" type="video/mp4" />
+      Seu navegador não suporta vídeos HTML5.
+    </video>
+    <div class="video-overlay">
+      <!-- Conteúdo por cima do vídeo (opcional) -->
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2>Let’s Work Together</h2>
+    <div class="container">
+      <div class="contact-content">
+        <div class="author-info">
+          <div>
+            <p>Hi, I’m Arthur Fonseca – Web Designer & Front-End Developer
+            <br><br>
+              With 6+ years of experience , I transform your ideas into stunning, high-performing websites. As a dedicated and qualified professional , I’ve helped 50+ businesses elevate their online presence with tailored solutions that drive results.
+            <br><br>  
+              Specializing in sleek designs, seamless functionality, and user-friendly experiences, I’m here to bring your vision to life and make your digital goals a reality. Let’s create something amazing together! 
+              <br><br> 
+              Let’s talk – Your dream website starts here!</p>
+          </div>
+          <div>
+            <img src="profile-pic2.png" alt="Author Photo">
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <section>
+    <div class="section">
+      <h2>Start You project</h2>
+      <p>Send your idea and let’s make it happen.</p>
+      </div>
+      <form id="meu-form" action="https://formspree.io/f/xjkypyqb" method="POST" class="form-lead">
+        
+        <label>
+          Name:
+          <input type="text" name="name" required />
+        </label>
+      
+        <label>
+          E-mail:
+          <input type="email" name="email" required />
+        </label>
+      
+        <label>
+          Tell me about your project:
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+      
+        <button type="submit">Send</button>
+      </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Arthur Fonseca. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/arthur-fonseca-76018620a"><img src="images/in.png" alt="LinkedIn"></a>
+        <a href="https://www.instagram.com/stigy.me/"><img src="images/ig.png" alt="Instagram"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('meu-form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      });
+  
+      if (res.ok) {
+        window.location.href = 'https://www.upwork.com/freelancers/~01aa6ae42638ce0e82?mp_source=share"';
+      } else {
+        alert('Error. Please try again.');
+      }
+    });
+  </script>
+
+</body>
+</html>
