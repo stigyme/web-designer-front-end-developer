@@ -67,7 +67,7 @@ body {
 }
 
 .bg-mask {
-  background-image: url('images/bg-purple.webp');
+  background-image: url('bg-purple.webp');
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
