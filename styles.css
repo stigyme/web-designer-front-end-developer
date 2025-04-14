@@ -106,6 +106,7 @@ nav {
   z-index: 10;
   position: relative;
   z-index: 2;
+  background-color: transparent;
 }
 
 .logo img {
@@ -144,12 +145,14 @@ nav {
 }
 
 .menu {
+  background-color: transparent;
   list-style: none;
   display: flex;
   gap: 20px;
 }
 
 .menu a {
+  background-color: transparent;
   color: #ffffff;
   text-decoration: none;
   font-size: 1rem;
@@ -465,13 +468,14 @@ footer p {
     font-size: 2rem;
     cursor: pointer;
     color: #ffffff;
+    background-color: transparent;
   }
 
   .menu {
     display: none;
     flex-direction: column;
     gap: 10px;
-    background-color: #121212;
+    background-color: #ffffff00;
     position: absolute;
     top: 60px;
     right: 0;
@@ -484,11 +488,13 @@ footer p {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: transparent;
   }
 
   .menu a {
     font-size: 1rem;
     text-align: center;
+    background-color: transparent;
   }
 
   .cta-button {
