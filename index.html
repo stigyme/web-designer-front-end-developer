@@ -6,27 +6,6 @@
   <title>Web Designer & Front End Developer</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="logo.png" type="image/x-icon" />
-  <style>
-    #header {
-      background-image: url('86.webp');
-    }
-    #header::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom, rgba(33, 33, 33, 0) 30%, #121212 100%);
-      pointer-events: none; /* permite clicar nos elementos abaixo */
-      z-index: 1;
-    }
-    #contact {
-      background-color: #121212; /* Fallback caso a imagem não carregue */
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-  </style>
 </head>
 <body>
 
@@ -42,19 +21,19 @@
   </script>
 
   <!-- Header -->
-  <header id="header">
+  <header id="header" class="bg-mask">
+    <div class="mask" id="mask"></div>
     <div class="container">
       <nav>
-        <div class="logo">
+        <div class="logo" style="z-index: 5;">
           <img src="logo.png">
         </div>
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="menu-icon" onclick="toggleMenu()" style="z-index: 5;">☰</div>
         <ul class="menu" id="menu">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#portfolio" style="z-index: 5;">Portfolio</a></li>
+          <li><a href="#services" style="z-index: 5;">Services</a></li>
+          <li><a href="#contact" style="z-index: 5;">Contact</a></li>
         </ul>
-        
       </nav>
       <div class="hero-content">
         <h2>Transform Your Vision <br class="quebra-desktop">Into Digital Reality</h2>
@@ -62,6 +41,7 @@
         <a href="#services" class="cta-button hero-cta">Get Started</a>
       </div>
     </div>
+
   </header>
 
   <!--carrossel-->
@@ -94,6 +74,30 @@
       <div class="logo-slide"><img src="images/logo6.png" alt="Logo 5" /></div>
     </div>
   </section>
+  
+  <!-- Portfolio -->
+  <section id="portfolio" class="section">
+    <div class="container">
+      <h2>My Portfolio</h2>
+  </section>
+  <section class="galeria-links">
+    <a href="https://stigyme.github.io/StiGy-Studio/"><img src="images/Frame5.png" alt="Imagem 5" /></a>
+    <a href="https://moviesforyou.com.br/"><img src="images/Frame1.png" alt="Imagem 1" /></a>
+    <a href="https://performanceacademy.education/vender-mais-com-ia-v2/"><img src="images/Frame2.png" alt="Imagem 2" /></a>
+    <a href="https://performanceacademy.education/"><img src="images/Frame3.png" alt="Imagem 3" /></a>
+    <a href="https://performanceacademy.education/curso-de-ia-para-empresarios-em-sao-paulo/"><img src="images/Frame4.png" alt="Imagem 4" /></a>
+    <a href="https://zappiello.com.br/"><img src="images/Frame6.png" alt="Imagem 6" /></a>
+  </section>
+  
+  <section class="video-section">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="images/webprojects.mp4" type="video/mp4" />
+      Seu navegador não suporta vídeos HTML5.
+    </video>
+    <div class="video-overlay">
+      <!-- Conteúdo por cima do vídeo (opcional) -->
+    </div>
+  </section>
 
   <!-- Services -->
   <section id="services" class="section">
@@ -119,29 +123,6 @@
     </div>
   </section>
 
-  <!-- Portfolio -->
-  <section id="portfolio" class="section">
-    <div class="container">
-      <h2>My Portfolio</h2>
-  </section>
-  <section class="galeria-links">
-    <a href="https://stigyme.github.io/StiGy-Studio/"><img src="images/Frame5.png" alt="Imagem 5" /></a>
-    <a href="https://moviesforyou.com.br/"><img src="images/Frame1.png" alt="Imagem 1" /></a>
-    <a href="https://performanceacademy.education/vender-mais-com-ia-v2/"><img src="images/Frame2.png" alt="Imagem 2" /></a>
-    <a href="https://performanceacademy.education/"><img src="images/Frame3.png" alt="Imagem 3" /></a>
-    <a href="https://performanceacademy.education/curso-de-ia-para-empresarios-em-sao-paulo/"><img src="images/Frame4.png" alt="Imagem 4" /></a>
-    <a href="https://zappiello.com.br/"><img src="images/Frame6.png" alt="Imagem 6" /></a>
-  </section>
-  
-  <section class="video-section">
-    <video autoplay muted loop playsinline class="bg-video">
-      <source src="images/webprojects.mp4" type="video/mp4" />
-      Seu navegador não suporta vídeos HTML5.
-    </video>
-    <div class="video-overlay">
-      <!-- Conteúdo por cima do vídeo (opcional) -->
-    </div>
-  </section>
 
   <!-- Contact -->
   <section id="contact" class="section">
@@ -159,7 +140,7 @@
               Let’s talk – Your dream website starts here!</p>
           </div>
           <div>
-            <img src="perfil.webp" alt="Author Photo" style="border-radius: 20px;">
+            <img src="perfil.png" alt="Author Photo" style="border-radius: 20px;">
           </div>
           
         </div>
@@ -222,6 +203,17 @@
       }
     });
   </script>
+
+<script>
+  const mask = document.getElementById('mask');
+
+  document.addEventListener('mousemove', (e) => {
+    const x = e.clientX;
+    const y = e.clientY;
+    mask.style.webkitMask = `radial-gradient(circle 320px at ${x}px ${y}px, transparent 30%, black 100%)`;
+    mask.style.mask = `radial-gradient(circle 320px at ${x}px ${y}px, transparent 30%, black 100%)`;
+  });
+</script>
 
 </body>
 </html>
