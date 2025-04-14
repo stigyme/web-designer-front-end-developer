@@ -691,6 +691,9 @@ footer p {
   .galeria-links {
     grid-template-columns: repeat(3, 1fr);
   }
+  .author-info img {
+    margint-top: 20px;
+  }
 }
 
 /* Esconde o <br> no mobile */
