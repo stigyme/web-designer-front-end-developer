@@ -47,20 +47,55 @@ body {
   }
 }
 
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.95);
+  -webkit-mask: radial-gradient(circle 100px at var(--x, 50%) var(--y, 50%), transparent 0%, black 100%);
+  mask: radial-gradient(circle 100px at var(--x, 50%) var(--y, 50%), transparent 0%, black 100%);
+  pointer-events: none; /* impede que ela bloqueie o botão */
+  z-index: 1;
+}
+
 /* Header */
 #header {
   position: relative;
+  overflow: hidden;
+}
+
+.bg-mask {
+  background-image: url('images/bg-purple.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
   height: 100vh;
-  background: linear-gradient(135deg, #121212, #2c2c2c);
   background-size: 130% 130%;
   animation: lightEffect 20s infinite alternate ease-in-out;
   overflow: hidden;
+  pointer-events: none; /* impede que ela bloqueie o botão */
+  z-index: 1;
+}
+
+.bg-mask::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(33, 33, 33, 0) 30%, #121212 100%);
+  pointer-events: none; /* impede que ela bloqueie o botão */
+  z-index: 1;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  z-index: 2; /* acima das máscaras */
 }
 
 nav {
@@ -70,6 +105,7 @@ nav {
   padding-top: 20px;
   z-index: 10;
   position: relative;
+  z-index: 2;
 }
 
 .logo img {
@@ -78,10 +114,12 @@ nav {
   transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   overflow: hidden;
+  z-index: 2;
 }
 
 .menu-icon{
   display: none;
+  pointer-events: auto;
 }
 
 .logo img::before {
@@ -117,6 +155,7 @@ nav {
   font-size: 1rem;
   transition: color 0.3s ease, text-shadow 0.3s ease;
   position: relative;
+  pointer-events: auto;
 }
 
 .menu a:hover {
@@ -131,8 +170,10 @@ nav {
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
   overflow: hidden;
+  position: relative;
+  z-index: 50;
+  pointer-events: auto;
 }
 
 .cta-button::before {
